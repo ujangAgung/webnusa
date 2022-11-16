@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route, NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { Home, Kontak } from "../pages/importPages";
 import NoPage from "../pages/NoPage";
 
@@ -26,14 +27,14 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li>
-                <a href={"/#layanan"} className="menu-navbar">
+                <HashLink smooth to={"/#layanan"} className="menu-navbar">
                   Layanan
-                </a>
+                </HashLink>
               </li>
               <li>
-                <a href={"/#tentang"} className="menu-navbar">
+                <HashLink to={"/#tentang"} className="menu-navbar">
                   Tentang
-                </a>
+                </HashLink>
               </li>
               <li>
                 <NavLink to={"/kontak"} className="menu-navbar">
@@ -53,15 +54,15 @@ const Navbar = () => {
               className="w-9"
             />
           </NavLink>
-          <a href={"/#layanan"} className="menu-navbar">
+          <HashLink to={"/#layanan"} className="menu-navbar">
             layanan
-          </a>
-          <a href={"/#tentang"} className="menu-navbar">
+          </HashLink>
+          <HashLink to={"/#tentang"} className="menu-navbar">
             tentang
-          </a>
-          <a to={"/kontak"} className="menu-navbar">
+          </HashLink>
+          <NavLink to={"/kontak"} className="menu-navbar">
             kontak
-          </a>
+          </NavLink>
         </div>
       </nav>
     </>
